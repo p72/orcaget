@@ -700,8 +700,8 @@ End
 		        pe = InStr(p, s, tag2)
 		        classnum = Mid(s, p, pe - p)
 		      End if
-		      p=0
 		    End if
+		    p=0
 		    
 		    tag1 = "<Medication_Code type=""string"">"
 		    tag2 = "</Medication_Code>"
