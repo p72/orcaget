@@ -25,7 +25,7 @@ Begin Window Window1
    Resizeable      =   True
    Title           =   "ORCA_medicalgetv2"
    Visible         =   True
-   Width           =   652
+   Width           =   804
    Begin TextArea xmls
       AcceptTabs      =   False
       Alignment       =   0
@@ -470,9 +470,9 @@ Begin Window Window1
       AutoHideScrollbars=   True
       Bold            =   False
       Border          =   True
-      ColumnCount     =   3
+      ColumnCount     =   6
       ColumnsResizable=   True
-      ColumnWidths    =   "80,230"
+      ColumnWidths    =   "80,80,40,200,40,*"
       DataField       =   ""
       DataSource      =   ""
       DefaultRowHeight=   -1
@@ -488,7 +488,7 @@ Begin Window Window1
       Hierarchical    =   False
       Index           =   -2147483648
       InitialParent   =   ""
-      InitialValue    =   "Code	Name	Num	Unit\n			"
+      InitialValue    =   "Code	Name	Num	Name	Num	Unit\n			"
       Italic          =   False
       Left            =   281
       LockBottom      =   False
@@ -511,7 +511,7 @@ Begin Window Window1
       Underline       =   False
       UseFocusRing    =   True
       Visible         =   True
-      Width           =   351
+      Width           =   503
       _ScrollOffset   =   0
       _ScrollWidth    =   -1
    End
@@ -669,16 +669,39 @@ End
 		  xmls.Text=result
 		  
 		  dim p,pe as Integer
-		  dim tag1,tag2,temps as String
+		  dim tag1,tag2,temps,tag3 as String
 		  dim s as String = xmls.Text
+		  dim classname as String 
+		  dim classnum as String 
 		  
 		  LBmedication.DeleteAllRows
 		  
 		  Dim i as Integer
+		  
 		  For i = 1 To 150
 		    s = xmls.Text
-		    p = 1
+		    p = 0
 		    dim temp1,temp2,temp3,temp4 as String
+		    
+		    if (inStr(0,s,"<Medical_Class_Name type=""string"">")<>0) and _
+		      inStr(0,s,"<Medical_Class_Name type=""string"">") <inStr(0,s,"<Medication_Code type=""string"">") then
+		      
+		      tag1="<Medical_Class_Name type=""string"">"
+		      tag2="</Medical_Class_Name>"
+		      if inStr(p,s,tag1)>0 then
+		        p = InStr(p, s, tag1) + Len(tag1)
+		        pe = InStr(p, s, tag2)
+		        classname = Mid(s, p, pe - p)
+		      End if
+		      tag1="<Medical_Class_Number type=""string"">"
+		      tag2="</Medical_Class_Number>"
+		      if inStr(p,s,tag1)>0 then
+		        p = InStr(p, s, tag1) + Len(tag1)
+		        pe = InStr(p, s, tag2)
+		        classnum = Mid(s, p, pe - p)
+		      End if
+		      p=0
+		    End if
 		    
 		    tag1 = "<Medication_Code type=""string"">"
 		    tag2 = "</Medication_Code>"
@@ -702,13 +725,27 @@ End
 		      temp3 = Mid(s, p, pe - p)
 		      p = pe + Len(tag2)
 		      
-		      LBmedication.AddRow(temp1,temp2,temp3,temp4)
+		      tag1="<Unit_Code_Name type=""string"">"
+		      tag2="</Unit_Code_Name>"
+		      tag3="</Medication_info_child>"
+		      if (inStr(p,s,tag1)>0) and (inStr(p,s,tag1)<inStr(p,s,tag3)) then
+		        p = InStr(p, s, tag1) + Len(tag1)
+		        pe = InStr(p, s, tag2)
+		        temp4 = Mid(s, p, pe - p)
+		        p = pe + Len(tag2)
+		      End if
+		      
+		      LBmedication.AddRow(temp1,classname,classnum,temp2,temp3,temp4)
 		    End if
 		    
 		    '解析済みのテキストを削る
 		    xmls.Text = Mid(s, p, Len(s) - p)
+		    
+		    tag1 = "<Medication_Code type=""string"">"
+		    if inStr(0,xmls.Text,tag1)=0 then i=150
+		    
+		    
 		  Next
-		  
 		  
 		End Sub
 	#tag EndEvent
