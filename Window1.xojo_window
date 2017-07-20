@@ -9,7 +9,7 @@ Begin Window Window1
    FullScreen      =   False
    FullScreenButton=   False
    HasBackColor    =   False
-   Height          =   506
+   Height          =   652
    ImplicitInstance=   True
    LiveResize      =   True
    MacProcID       =   0
@@ -23,9 +23,9 @@ Begin Window Window1
    MinWidth        =   64
    Placement       =   0
    Resizeable      =   True
-   Title           =   "ORCA_medicalgetv2"
+   Title           =   "ORCA_medicalgetv2_1.1"
    Visible         =   True
-   Width           =   804
+   Width           =   881
    Begin TextArea xmls
       AcceptTabs      =   False
       Alignment       =   0
@@ -43,7 +43,7 @@ Begin Window Window1
       HideSelection   =   True
       Index           =   -2147483648
       Italic          =   False
-      Left            =   20
+      Left            =   -303
       LimitText       =   0
       LineHeight      =   0.0
       LineSpacing     =   1.0
@@ -67,11 +67,11 @@ Begin Window Window1
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   528
+      Top             =   -23
       Underline       =   False
       UseFocusRing    =   True
       Visible         =   False
-      Width           =   280
+      Width           =   133
    End
    Begin PushButton PushButton1
       AutoDeactivate  =   True
@@ -170,7 +170,7 @@ Begin Window Window1
       GridLinesVertical=   0
       HasHeading      =   True
       HeadingIndex    =   -1
-      Height          =   267
+      Height          =   413
       HelpTag         =   ""
       Hierarchical    =   False
       Index           =   -2147483648
@@ -178,7 +178,7 @@ Begin Window Window1
       InitialValue    =   "日付	Code	Name	Seq\n			"
       Italic          =   False
       Left            =   20
-      LockBottom      =   False
+      LockBottom      =   True
       LockedInPosition=   False
       LockLeft        =   True
       LockRight       =   False
@@ -388,7 +388,7 @@ Begin Window Window1
       HideSelection   =   True
       Index           =   -2147483648
       Italic          =   False
-      Left            =   20
+      Left            =   -303
       LimitText       =   0
       LineHeight      =   0.0
       LineSpacing     =   1.0
@@ -412,11 +412,11 @@ Begin Window Window1
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   585
+      Top             =   34
       Underline       =   False
       UseFocusRing    =   True
       Visible         =   False
-      Width           =   280
+      Width           =   133
    End
    Begin TextArea TextArea2
       AcceptTabs      =   False
@@ -435,7 +435,7 @@ Begin Window Window1
       HideSelection   =   True
       Index           =   -2147483648
       Italic          =   False
-      Left            =   312
+      Left            =   -158
       LimitText       =   0
       LineHeight      =   0.0
       LineSpacing     =   1.0
@@ -459,36 +459,36 @@ Begin Window Window1
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   528
+      Top             =   -23
       Underline       =   False
       UseFocusRing    =   True
       Visible         =   False
-      Width           =   320
+      Width           =   113
    End
    Begin Listbox LBmedication
       AutoDeactivate  =   True
       AutoHideScrollbars=   True
       Bold            =   False
       Border          =   True
-      ColumnCount     =   6
+      ColumnCount     =   7
       ColumnsResizable=   True
-      ColumnWidths    =   "80,80,40,200,40,*"
+      ColumnWidths    =   "25,80,80,200,40,60,40"
       DataField       =   ""
       DataSource      =   ""
       DefaultRowHeight=   -1
       Enabled         =   True
-      EnableDrag      =   False
+      EnableDrag      =   True
       EnableDragReorder=   False
       GridLinesHorizontal=   2
       GridLinesVertical=   2
       HasHeading      =   True
       HeadingIndex    =   -1
-      Height          =   464
+      Height          =   450
       HelpTag         =   ""
       Hierarchical    =   False
       Index           =   -2147483648
       InitialParent   =   ""
-      InitialValue    =   "Code	Name	Num	Name	Num	Unit\n			"
+      InitialValue    =   "No	Code	Name	Name	Num	Unit	Num\n						"
       Italic          =   False
       Left            =   281
       LockBottom      =   False
@@ -511,7 +511,57 @@ Begin Window Window1
       Underline       =   False
       UseFocusRing    =   True
       Visible         =   True
-      Width           =   503
+      Width           =   536
+      _ScrollOffset   =   0
+      _ScrollWidth    =   -1
+   End
+   Begin Listbox LBmedication1
+      AutoDeactivate  =   True
+      AutoHideScrollbars=   True
+      Bold            =   False
+      Border          =   True
+      ColumnCount     =   7
+      ColumnsResizable=   False
+      ColumnWidths    =   "25,80,80,200,40,60,40"
+      DataField       =   ""
+      DataSource      =   ""
+      DefaultRowHeight=   -1
+      Enabled         =   True
+      EnableDrag      =   False
+      EnableDragReorder=   True
+      GridLinesHorizontal=   2
+      GridLinesVertical=   2
+      HasHeading      =   True
+      HeadingIndex    =   -1
+      Height          =   143
+      HelpTag         =   ""
+      Hierarchical    =   False
+      Index           =   -2147483648
+      InitialParent   =   ""
+      InitialValue    =   "No	Code	Name	Name	Num	Unit	Num\n"
+      Italic          =   False
+      Left            =   281
+      LockBottom      =   True
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      RequiresSelection=   False
+      Scope           =   0
+      ScrollbarHorizontal=   False
+      ScrollBarVertical=   True
+      SelectionType   =   1
+      TabIndex        =   11
+      TabPanelIndex   =   0
+      TabStop         =   True
+      TextFont        =   "System"
+      TextSize        =   0.0
+      TextUnit        =   0
+      Top             =   489
+      Underline       =   False
+      UseFocusRing    =   True
+      Visible         =   True
+      Width           =   536
       _ScrollOffset   =   0
       _ScrollWidth    =   -1
    End
@@ -538,100 +588,52 @@ End
 		  result = DefineEncoding(result, Encodings.UTF8)
 		  if socket1.ErrorCode = -1 then MsgBox ("error")
 		  
-		  TextArea1.Text=result
-		  xmls.Text=result
 		  
-		  dim p,pe as Integer
+		  dim myXml as new orcaXml(result)
 		  dim tag1,tag2,temps as String
-		  dim s as String
+		  dim temp1,temp2,temp3,temp4 as String
 		  
-		  s=xmls.Text
 		  output.Text=""
-		  
 		  tag1 = "<WholeName type=""string"">"
 		  tag2 = "</WholeName>"
-		  p = InStr(p, s, tag1) + Len(tag1)
-		  pe = InStr(p, s, tag2)
-		  temps = Mid(s, p, pe - p)
-		  p = pe + Len(tag2)
-		  output.AppendText("患者氏名:"+temps+EndOfLine)
-		  
+		  temps=myXml.getTagContentsAndMove(myXml.pos,tag1,tag2)
+		  output.AppendText( "患者氏名:"+ temps + EndOfLine)
 		  tag1 = "<WholeName_inKana type=""string"">"
 		  tag2 = "</WholeName_inKana>"
-		  p = InStr(p, s, tag1) + Len(tag1)
-		  pe = InStr(p, s, tag2)
-		  temps = Mid(s, p, pe - p)
-		  p = pe + Len(tag2)
-		  output.AppendText("カナ:"+temps+EndOfLine)
-		  
+		  temps=myXml.getTagContentsAndMove(myXml.pos,tag1,tag2)
+		  output.AppendText( "カナ:"+ temps + EndOfLine)
 		  tag1 = "<BirthDate type=""string"">"
 		  tag2 = "</BirthDate>"
-		  p = InStr(p, s, tag1) + Len(tag1)
-		  pe = InStr(p, s, tag2)
-		  temps = Mid(s, p, pe - p)
-		  p = pe + Len(tag2)
-		  output.AppendText("生年月日:"+temps+EndOfLine)
-		  
+		  temps=myXml.getTagContentsAndMove(myXml.pos,tag1,tag2)
+		  output.AppendText( "生年月日:"+ temps + EndOfLine)
 		  tag1 = "<Sex type=""string"">"
 		  tag2 = "</Sex>"
-		  p = InStr(p, s, tag1) + Len(tag1)
-		  pe = InStr(p, s, tag2)
-		  temps = Mid(s, p, pe - p)
-		  p = pe + Len(tag2)
-		  output.AppendText("性別:"+temps+EndOfLine)
+		  temps=myXml.getTagContentsAndMove(myXml.pos,tag1,tag2)
+		  output.AppendText( "性別:"+ temps + EndOfLine)
 		  
 		  
 		  LBrireki.DeleteAllRows
-		  dim i as Integer
-		  For i = 1 To 150
-		    s = xmls.Text
-		    p = 1
-		    dim temp1,temp2,temp3,temp4 as String
-		    
+		  dim exitflag As Integer = 0 'タグ破損による無限ループを避けるため
+		  While exitflag<200
 		    tag1 = "<Perform_Date type=""string"">"
 		    tag2 = "</Perform_Date>"
-		    p = InStr(p, s, tag1) + Len(tag1)
-		    pe = InStr(p, s, tag2)
-		    temp1 = Mid(s, p, pe - p)
-		    p = pe + Len(tag2)
-		    
-		    if temp1<>"" then 
-		      
-		      output.AppendText("受信履歴date:"+temp1+EndOfLine)
-		      
+		    temp1=myXml.getTagContentsAndMove(myXml.pos,tag1,tag2)
+		    If temp1="" Then 
+		      Exit
+		    Else 
 		      tag1 = "<Department_Code type=""string"">"
 		      tag2 = "</Department_Code>"
-		      p = InStr(p, s, tag1) + Len(tag1)
-		      pe = InStr(p, s, tag2)
-		      temp2 = Mid(s, p, pe - p)
-		      p = pe + Len(tag2)
-		      output.AppendText("受診履歴科code:"+temp2+EndOfLine)
-		      
+		      temp2=myXml.getTagContentsAndMove(myXml.pos,tag1,tag2)
 		      tag1 = "<Department_Name type=""string"">"
 		      tag2 = "</Department_Name>"
-		      p = InStr(p, s, tag1) + Len(tag1)
-		      pe = InStr(p, s, tag2)
-		      temp3 = Mid(s, p, pe - p)
-		      p = pe + Len(tag2)
-		      output.AppendText("受信履歴科name:"+temp3+EndOfLine)
-		      
+		      temp3=myXml.getTagContentsAndMove(myXml.pos,tag1,tag2)
 		      tag1 = "<Sequential_Number type=""string"">"
 		      tag2 = "</Sequential_Number>"
-		      p = InStr(p, s, tag1) + Len(tag1)
-		      pe = InStr(p, s, tag2)
-		      temp4 = Mid(s, p, pe - p)
-		      p = pe + Len(tag2)
-		      output.AppendText("受信履歴連番:"+temp4+EndOfLine)
-		      
-		      '解析済みのテキストを削る
-		      xmls.Text = Mid(s, p, Len(s) - p)
-		      'LB
+		      temp4=myXml.getTagContentsAndMove(myXml.pos,tag1,tag2)
 		      LBrireki.AddRow(temp1,temp2,temp3,temp4)
-		      
-		    end if
-		    
-		  Next
-		  
+		      exitflag=exitflag+1
+		    End if
+		  WEND
 		  
 		End Sub
 	#tag EndEvent
@@ -665,88 +667,91 @@ End
 		  result = DefineEncoding(result, Encodings.UTF8)
 		  if socket1.ErrorCode = -1 then MsgBox ("error")
 		  '
-		  TextArea2.Text=result
-		  xmls.Text=result
 		  
-		  dim p,pe as Integer
-		  dim tag1,tag2,temps,tag3 as String
-		  dim s as String = xmls.Text
+		  dim tag1,tag2,tag3 as String
 		  dim classname as String 
 		  dim classnum as String 
+		  Dim gyou as Integer = 1
 		  
 		  LBmedication.DeleteAllRows
+		  dim myXml as new orcaXml(result)
+		  dim medicalClass As String ="<Medical_Class_Name type=""string"">"
+		  dim medicationCode As String = "<Medication_Code type=""string"">"
 		  
-		  Dim i as Integer
-		  
-		  For i = 1 To 150
-		    s = xmls.Text
-		    p = 0
-		    dim temp1,temp2,temp3,temp4 as String
-		    
-		    if (inStr(0,s,"<Medical_Class_Name type=""string"">")<>0) and _
-		      inStr(0,s,"<Medical_Class_Name type=""string"">") <inStr(0,s,"<Medication_Code type=""string"">") then
-		      
-		      tag1="<Medical_Class_Name type=""string"">"
-		      tag2="</Medical_Class_Name>"
-		      if inStr(p,s,tag1)>0 then
-		        p = InStr(p, s, tag1) + Len(tag1)
-		        pe = InStr(p, s, tag2)
-		        classname = Mid(s, p, pe - p)
-		      End if
-		      tag1="<Medical_Class_Number type=""string"">"
-		      tag2="</Medical_Class_Number>"
-		      if inStr(p,s,tag1)>0 then
-		        p = InStr(p, s, tag1) + Len(tag1)
-		        pe = InStr(p, s, tag2)
-		        classnum = Mid(s, p, pe - p)
-		      End if
-		    End if
-		    p=0
-		    
-		    tag1 = "<Medication_Code type=""string"">"
-		    tag2 = "</Medication_Code>"
-		    p = InStr(p, s, tag1) + Len(tag1)
-		    pe = InStr(p, s, tag2)
-		    temp1 = Mid(s, p, pe - p)
-		    p = pe + Len(tag2)
-		    
-		    if temp1 <>"" then 
+		  WHILE myXml.SearchPreTag(myXml.pos,medicalClass)<>0
+		    tag1="<Medical_Class_Name type=""string"">"
+		    tag2="</Medical_Class_Name>"
+		    classname=myXml.getTagContentsAndMove(myXml.pos,tag1,tag2)
+		    tag1="<Medical_Class_Number type=""string"">"
+		    tag2="</Medical_Class_Number>"
+		    classnum=myXml.getTagContentsAndMove(myXml.pos,tag1,tag2)
+		    WHILE myXml.SearchPreTag(myXml.pos,medicationCode)<>0 AND myXml.SearchPreTag(myXml.pos,medicationCode)<myXml.SearchPreTag(myXml.pos,medicalClass)
+		      dim temp1,temp2,temp3,temp4 as String
+		      tag1 = "<Medication_Code type=""string"">"
+		      tag2 = "</Medication_Code>"
+		      temp1=myXml.getTagContentsAndMove(myXml.pos,tag1,tag2)
 		      tag1 = "<Medication_Name type=""string"">"
 		      tag2 = "</Medication_Name>"
-		      p = InStr(p, s, tag1) + Len(tag1)
-		      pe = InStr(p, s, tag2)
-		      temp2 = Mid(s, p, pe - p)
-		      p = pe + Len(tag2)
-		      
+		      temp2=myXml.getTagContentsAndMove(myXml.pos,tag1,tag2)
 		      tag1 = "<Medication_Number type=""string"">"
 		      tag2 = "</Medication_Number>"
-		      p = InStr(p, s, tag1) + Len(tag1)
-		      pe = InStr(p, s, tag2)
-		      temp3 = Mid(s, p, pe - p)
-		      p = pe + Len(tag2)
-		      
+		      temp3=myXml.getTagContentsAndMove(myXml.pos,tag1,tag2)
 		      tag1="<Unit_Code_Name type=""string"">"
 		      tag2="</Unit_Code_Name>"
 		      tag3="</Medication_info_child>"
-		      if (inStr(p,s,tag1)>0) and (inStr(p,s,tag1)<inStr(p,s,tag3)) then
-		        p = InStr(p, s, tag1) + Len(tag1)
-		        pe = InStr(p, s, tag2)
-		        temp4 = Mid(s, p, pe - p)
-		        p = pe + Len(tag2)
-		      End if
-		      
-		      LBmedication.AddRow(temp1,classname,classnum,temp2,temp3,temp4)
+		      IF myXml.SearchPreTag(myXml.pos,tag1)<>0 AND myXml.SearchPreTag(myXml.pos,tag1)<myXml.SearchPreTag(myXml.pos,tag3) THEN
+		        temp4=myXml.getTagContentsAndMove(myXml.pos,tag1,tag2)
+		      END IF
+		      LBmedication.AddRow( Right("00"+Str(gyou),2),temp1,classname,temp2,temp3,temp4,classnum)
+		      gyou=gyou+1
+		    WEND
+		    'LBmedication.AddRow(Right("00"+Str(gyou),2))
+		    'gyou=gyou+1
+		    
+		  WEND
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events LBmedication
+	#tag Event
+		Function DragRow(drag As DragItem, row As Integer) As Boolean
+		  'Function DragRow (Drag as DragItem, Row as Integer) as Boolean
+		  Dim nRows, i as Integer
+		  nRows=Me.ListCount-1
+		  For i=0 to nRows
+		    If Me.Selected(i) then
+		      Drag.AddItem(0,0,20,4)
+		      Drag.Text=i.ToText 
 		    End if
-		    
-		    '解析済みのテキストを削る
-		    xmls.Text = Mid(s, p, Len(s) - p)
-		    
-		    tag1 = "<Medication_Code type=""string"">"
-		    if inStr(0,xmls.Text,tag1)=0 then i=150
-		    
-		    
 		  Next
+		  Return True //allow the drag
+		End Function
+	#tag EndEvent
+#tag EndEvents
+#tag Events LBmedication1
+	#tag Event
+		Sub Open()
+		  Me.AcceptTextDrop
 		  
+		  me.ColumnType(1)=ListBox.TypeEditable
+		  me.ColumnType(2)=ListBox.TypeEditable
+		  me.ColumnType(3)=ListBox.TypeEditable
+		  me.ColumnType(4)=ListBox.TypeEditable
+		  me.ColumnType(5)=ListBox.TypeEditable
+		  me.ColumnType(6)=ListBox.TypeEditable
+		  
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub DropObject(obj As DragItem, action As Integer)
+		  'Sub DropObject(obj as DragItem)
+		  Do
+		    If Obj.TextAvailable then
+		      dim i as Integer
+		      i=Val(Obj.text)
+		      Me.AddRow("",LBmedication.cell(i,1),LBmedication.cell(i,2),LBmedication.cell(i,3),LBmedication.cell(i,4),LBmedication.cell(i,5),LBmedication.cell(i,6))
+		    End if
+		  Loop until Not obj.NextItem
 		End Sub
 	#tag EndEvent
 #tag EndEvents
